@@ -5,3 +5,16 @@
     BONUS) Add a functioning "delete" button to each task (HINT: use the keyword "this" in your delete button's click listener! Console log "this" to see what value it holds)
     SUPER BONUS) Make each task editable
 */
+
+var button = document.getElementById("add-button");
+var newTask = document.getElementById("description")
+
+button.addEventListener('click', function(){
+    var taskItem = document.createElement("li");
+
+    taskItem.setAttribute("onclick", "editItems()");
+    taskItem.innerText = document.getElementById("description").value;
+    document.getElementById("todo-list").appendChild(taskItem);
+
+});
+
